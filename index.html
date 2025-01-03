@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kirish</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:ital,wght@0,300;0,400;0,700;1,100;1,500&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="./image/favicon.ico">
+</head>
+<body>
+    <div class="contener">
+        <div class="bluebox">
+            <div class="box signin">
+                <div class="main-header-logo">
+                    Webdizayn.uz
+                </div>
+                <h2>Sizning allaqachon hisobingiz bormi?</h2>
+                <button class="signinbutton">Kirish</button>
+            </div>
+            <div class="box signup">
+                <div class="main-header-logo">
+                    Webdizayn.uz
+                </div>
+                <h2> Sizning hisobingiz yo'qmi?</h2>
+                <button class="signupbutton">Ro'yhatdan o'tish</button>
+            </div>
+        </div>
+        <div class="formbox">
+            <div class="form signinform">
+                <form method="POST" action="https://webdizayn.uz/auth">
+                    <input type="hidden" name="_token" value="WU61PwkYGOANeBoNcalhyWiJmOqhsKHuFOrI7tpU">                    <h3>Kirish</h3>
+                    <input type="email" name="email" placeholder="Email">
+                    <input type="password" name="password" placeholder="Parol">
+                    <input type="submit" value="Kirish"><br>
+                    <a href="#" class="forgot">Parolni unutdingizmi?</a>
+
+                </form>
+            </div>
+
+            <div class="form signupform">
+                <h1> </h1>
+                <form method="post" action="https://webdizayn.uz/regstudent">
+                    <input type="hidden" name="_token" value="WU61PwkYGOANeBoNcalhyWiJmOqhsKHuFOrI7tpU">                    <h3>Ro'yhatdan o'tish</h3>
+                    <input type="text" name="name" placeholder="Ism">
+                    <input type="text" name="surname" placeholder="Familya">
+                    <input type="email" name="email" placeholder="Email">
+                    <input type="password" name="password" placeholder="Parol">
+                    <input type="password" name="confirm_password" placeholder="Parolni takrorlang">
+                    <input type="submit" value="Yuborish"><br>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        const signinbutton = document.querySelector('.signinbutton');
+        const signupbutton = document.querySelector('.signupbutton');
+        const formbox = document.querySelector('.formbox');
+        const body = document.querySelector('body')
+
+
+        
+        signupbutton.onclick = function(){
+            formbox.classList.add('active')
+            body.classList.add('active')
+        }
+        
+
+        signinbutton.onclick = function(){
+            formbox.classList.remove('active')
+            body.classList.remove('active')
+        }
+    </script>
+</body>
+</html>

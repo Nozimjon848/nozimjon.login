@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #03a9f4;
+    transition: 0.5s;
+}
+body.active{
+    background: #f43648;
+}
+.contener{
+    position: relative;
+    width: 800px;
+    height: 500px;
+    margin: 20px;
+}
+.bluebox{
+    border-radius: 5px;
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255,255,255,0.2);
+    box-shadow: 0 5px 45px rgba(0,0,0,0.15);
+}
+.bluebox .box{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.bluebox .box h2{
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.bluebox button{
+    cursor: pointer;
+    padding: 10px 20px;
+    background: #fff;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 3px;
+}
+.formbox{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 45px rgba(0,0,0,0.15);
+    transition: 0.5s ease-in-out;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.formbox.active{
+    left: 50%;
+}
+.formbox .signinform{
+    transition-delay: 0.25s;
+}
+.signinbutton{
+    border-radius: 3px;
+}
+
+input{
+    border-radius: 3px;
+}
+
+.main-header-logo{
+    font-size: 35px;
+    color: white;
+    position: relative;
+    margin-left: 15px;
+    top: 5;
+    left: 25;
+    display: inline-block;
+    font-family: 'Lobster', cursive;
+}
+
+.formbox .form{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 50px;
+    transition: 0.5s;
+    vertical-align: middle;
+}
+.formbox.active .signinform{
+    left: -100%;
+    transition-delay: 0s;
+}
+
+.formbox .signupform{
+    left: 100%;
+    transition-delay: 0s;
+}
+.formbox.active .signupform{
+    left: 0;
+}
+.formbox .form form{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+}
+.formbox .form form h3{
+    font-size: 1.5em;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 20px;
+}
+.formbox .form form input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    outline: none;
+    font-size: 16px;
+    border: 1px solid #333;
+}
+.formbox .form form input[type="submit"]{
+    background: #03a9f4;
+    border: none;
+    color: #fff;
+    max-width: 100px;
+    cursor: pointer;
+}
+.formbox.active .signupform input[type="submit"]{
+    background: #f43648;
+}
+.forgot{
+    color: #333;
+}
+
+@media(max-width:991px){
+    .contener{
+        max-width: 400px;
+        height: 650px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .contener .bluebox{
+        top: 0;
+        height: 100%;
+        
+
+    }
+    .formbox{
+        width: 100%;
+        height: 500px;
+        top: 0;
+        box-shadow: none;
+    }
+    .bluebox .box{
+        position: absolute;
+        width: 100%;
+        height: 150px;
+        bottom: 0;
+    }
+    .signin{
+        top: 0;
+    }
+    .formbox.active{
+        left: 0;
+        top: 150px;
+    }
+}
